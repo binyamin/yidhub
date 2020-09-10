@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css@latest/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap" crossorigin>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1 class="header__title">YidHub</h1>
+        <a href="https://github.com/binyamin/yidden.github.io" class="header__gh-link" target="_blank">
+            <img src="https://icongr.am/octicons/mark-github.svg?size=48&color=currentColor" alt="">
+        </a>
+        <img class="header__corner" src="./assets/besyata-dshmaya.svg" alt="" width="96">
+    </header>
+    <main class="page-main">
+        {% for user in userdata %}
+            {% include user.html %}
+        {% endfor %}
+    </main>
+    <footer class="page-footer">
+        <small>
+            &copy; 2020 <a href="https://binyam.in" target="_blank">Binyamin Green</a>
+        </small>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,27 @@
+{
+  "name": "yidden.github.io",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Directory of Yidden on GitHub",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/binyamin/yidden.github.io.git"
+  },
+  "keywords": [],
+  "author": "Binyamin Aron Green (https://binyam.in/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/binyamin/yidden.github.io/issues"
+  },
+  "homepage": "https://github.com/binyamin/yidden.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@binyamin/data-cache": "^1.0.1",
+    "axios": "^0.20.0"
+  }
+}

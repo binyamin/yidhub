@@ -1,0 +1,20 @@
+<div class="user">
+    <img src="{{user.avatar}}" alt="" width="48" class="user__img">
+    <p class="user__name"><a href="https://github.com/{{user.links.github}}">{{user.name}}</a></p>
+    <p class="user__login--github">@{{user.links.github}}</p>
+    <p class="user__bio">{{user.bio}}</p>
+    <div class="user__details">
+        <p class="user__details--twitter">
+            <img src="https://icongr.am/octicons/location.svg?size=24&color=currentColor" alt="">
+            <span>{{user.location}}</span>
+        </p>
+        <p class="user__details--site">
+            <img src="https://icongr.am/octicons/link.svg?size=24&color=currentColor" alt="">
+            <a href="{{user.links.site}}">{{user.links.site}}</a>
+        </p>
+        <p class="user__details--twitter">
+            <img src="https://icongr.am/simple/twitter.svg?size=24&color=currentColor" alt="">
+            <a href="https://twitter.com/{{user.links.twitter}}">{{user.links.twitter}}</a>
+        </p>
+    </div>
+</div>

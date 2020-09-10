@@ -1,0 +1,44 @@
+/* Body */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+/* Header */
+.page-header {
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.header__title {
+    flex-grow: 1;
+}
+
+.header__gh-link {
+    margin-right: 36px;
+}
+
+/* Main */
+.page-main {
+    flex-grow: 1;
+}
+
+/* Footer */
+.page-footer {
+    text-align: center;
+    padding: 8px 0;
+}
+
+/* https://codepen.io/sdthornton/pen/wBZdXq */
+.bxs-1 {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.bxs-2 {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
