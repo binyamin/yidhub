@@ -1,20 +1,32 @@
-<div class="user">
-    <img src="{{user.avatar}}" alt="" width="48" class="user__img">
-    <p class="user__name"><a href="https://github.com/{{user.links.github}}">{{user.name}}</a></p>
-    <p class="user__login--github">@{{user.links.github}}</p>
-    <p class="user__bio">{{user.bio}}</p>
-    <div class="user__details">
-        <p class="user__details--twitter">
-            <img src="https://icongr.am/octicons/location.svg?size=24&color=currentColor" alt="">
-            <span>{{user.location}}</span>
+<div class="user card">
+    <div class="card-section--top">
+        <img src="{{user.avatar}}" alt="" width="48" class="user__img">
+        <p class="user__name"><a href="https://github.com/{{user.links.github}}" target="_blank">{{user.name}}</a></p>
+        <p class="user__login--github">@{{user.links.github}}</p>
+        {% if user.bio %}
+        <p class="user__bio">{{user.bio}}</p>
+        {% endif %}
+    </div>
+    <div class="card-section--bottom">
+        {% if user.location %}
+        <p class="user-details">
+            <img class="user-details__icon" src="https://icongr.am/octicons/location.svg?size=24&color=currentColor" alt="Location" width="16">
+            <span class="user-details__label">{{user.location}}</span>
         </p>
-        <p class="user__details--site">
-            <img src="https://icongr.am/octicons/link.svg?size=24&color=currentColor" alt="">
-            <a href="{{user.links.site}}">{{user.links.site}}</a>
+        {% endif %}
+
+        {% if user.links.site %}
+        <p class="user-details">
+            <img class="user-details__icon" src="https://icongr.am/octicons/link.svg?size=24&color=currentColor" alt="Website" width="16">
+            <a class="user-details__label" href="{{user.links.site}}" target="_blank">{{user.links.site}}</a>
         </p>
-        <p class="user__details--twitter">
-            <img src="https://icongr.am/simple/twitter.svg?size=24&color=currentColor" alt="">
-            <a href="https://twitter.com/{{user.links.twitter}}">{{user.links.twitter}}</a>
+        {% endif %}
+
+        {% if user.links.twitter %}
+        <p class="user-details">
+            <img class="user-details__icon" src="https://icongr.am/simple/twitter.svg?size=24&color=currentColor" alt="Twitter" width="16">
+            <a class="user-details__label" href="https://twitter.com/{{user.links.twitter}}" target="_blank">{{user.links.twitter}}</a>
         </p>
+        {% endif %}
     </div>
 </div>

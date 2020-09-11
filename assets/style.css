@@ -1,15 +1,24 @@
 /* Body */
-body {
+html, body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    
+
     font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+a:any-link {
+    color: #2D9CDB;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:any-link:hover {
+    text-decoration: underline;
 }
 
 /* Header */
 .page-header {
-    background-color: #fff;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     display: flex;
     align-items: center;
@@ -27,6 +36,66 @@ body {
 /* Main */
 .page-main {
     flex-grow: 1;
+    margin: 24px;
+}
+
+.users {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Cards */
+.card {
+    width: 300px;
+    padding: 18px 12px;
+    margin: 12px;
+    border-radius: 4px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    height: min-content;
+}
+
+.card-section--top {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr auto;
+    column-gap: 8px;
+}
+
+.user__img {
+    grid-row: 1 / -1;
+    border-radius: 50%;
+}
+
+.user__name {
+    margin: 0;
+    font-weight: 700;
+    font-size: 18.66px;
+}
+
+.user__name a {
+    color: currentColor;
+}
+
+.user__login--github {
+    margin: 0;
+    color: #444;
+}
+
+.user__bio {
+    margin-top: 8px;
+}
+
+.card-section--bottom {
+    display: flex;
+}
+
+.user-details {
+    font-size: 13.33px;
+}
+
+.user-details__icon {
+    height: 16px;
 }
 
 /* Footer */

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://unpkg.com/normalize.css@latest/normalize.css">
+    <link rel="stylesheet" href="https://unpkg.com/normalize.css" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap" crossorigin>
     <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -12,14 +12,21 @@
     <header class="page-header">
         <h1 class="header__title">YidHub</h1>
         <a href="https://github.com/binyamin/yidden.github.io" class="header__gh-link" target="_blank">
-            <img src="https://icongr.am/octicons/mark-github.svg?size=48&color=currentColor" alt="">
+            <img src="https://icongr.am/octicons/mark-github.svg?size=128&color=currentColor" alt="" width="48">
         </a>
-        <img class="header__corner" src="./assets/besyata-dshmaya.svg" alt="" width="96">
+        <img class="header__corner" src="./assets/besyata-dshmaya.svg" alt="" width="60">
     </header>
     <main class="page-main">
-        {% for user in userdata %}
-            {% include user.html %}
-        {% endfor %}
+        <section class="users">
+            {% for user in userdata %}
+                {% include user.html %}
+            {% endfor %}
+            {%assign user=userdata|first%}
+            {% include user.html%}
+            {% for user in userdata %}
+                {% include user.html %}
+            {% endfor %}
+        </section>
     </main>
     <footer class="page-footer">
         <small>

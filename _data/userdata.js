@@ -1,6 +1,5 @@
 const users = require("./usernames.json");
 const axios = require("axios").default;
-
 const datacache = require("@binyamin/data-cache");
 
 module.exports = async () => {
@@ -11,23 +10,28 @@ module.exports = async () => {
 
         if(!userdata) {
             const {data} = await axios.get("https://api.github.com/users/"+uname);
-            datacache.set(
-                "users."+uname,
-                {
-                    links: {
-                        github: data.login,
-                        twitter: data.twitter_username,
-                        site: data.blog
-                    },
-                    name: data.name,
-                    avatar: data.avatar_url,
-                    bio: data.bio,
-                    location: data.location,
-                    public_repos: data.public_repos
-                }
-            );
-            userdata = data;
-        }        
+
+            userdata = {
+                links: {
+                    github: data.login,
+                    twitter: data.twitter_username,
+                    site: (() => {
+                        let l = data.blog || null;
+                        if(l && l.startsWith("http") === false) {
+                            l = "http://" + l;
+                        }
+                        return l;
+                    })()
+                },
+                name: data.name,
+                avatar: data.avatar_url,
+                bio: data.bio,
+                location: data.location,
+                public_repos: data.public_repos
+            };
+
+            datacache.set( "users."+uname, userdata);
+        }
 
         userArray.push(userdata);
     }
