@@ -6,15 +6,17 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://unpkg.com/normalize.css" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap" crossorigin>
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
     <header class="page-header">
         <h1 class="header__title">YidHub</h1>
-        <a href="https://github.com/binyamin/yidden.github.io" class="header__gh-link" target="_blank">
-            <img src="https://icongr.am/octicons/mark-github.svg?size=128&color=currentColor" alt="" width="48">
+        <a href="https://github.com/binyamin/yidden" class="header__gh-link" target="_blank" aria-label="Source Code on GitHub">
+            {% include ../assets/icons/mark-github.svg %}
         </a>
-        <img class="header__corner" src="./assets/besyata-dshmaya.svg" alt="" width="60">
+        <div class="header__corner" aria-label="With God's help">
+            {% include ../assets/besyata-dshmaya.svg %}
+        </div>
     </header>
     <main class="page-main">
         <section class="users">

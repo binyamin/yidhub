@@ -17,6 +17,14 @@ a:any-link:hover {
     text-decoration: underline;
 }
 
+a:any-link svg {
+    color: black;
+}
+
+a:any-link:hover svg {
+    color: #444;
+}
+
 /* Header */
 .page-header {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
@@ -30,7 +38,12 @@ a:any-link:hover {
 }
 
 .header__gh-link {
-    margin-right: 36px;
+    margin-right: 24px;
+    width: 36px;
+}
+
+.header__corner svg {
+    width: 60px;
 }
 
 /* Main */
@@ -90,19 +103,28 @@ a:any-link:hover {
 }
 
 .user__bio {
-    margin-top: 8px;
+    margin: 8px 0 0 0;
 }
 
 .card-section--bottom {
-    display: flex;
+    margin-top: 24px;
 }
 
 .user-details {
+    display: inline-flex;
+    align-items: center;
     font-size: 13.33px;
+    color: #444;
+    margin: 0 6px;
 }
 
 .user-details__icon {
+    margin-right: 2px;
+}
+
+.user-details__icon svg {
     height: 16px;
+    fill: currentColor;
 }
 
 /* Footer */

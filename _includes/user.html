@@ -9,24 +9,30 @@
     </div>
     <div class="card-section--bottom">
         {% if user.location %}
-        <p class="user-details">
-            <img class="user-details__icon" src="https://icongr.am/octicons/location.svg?size=24&color=currentColor" alt="Location" width="16">
+        <div class="user-details">
+            <div class="user-details__icon" aria-label="Location">
+                {% include ../assets/icons/location.svg %}
+            </div>
             <span class="user-details__label">{{user.location}}</span>
-        </p>
+        </div>
         {% endif %}
 
         {% if user.links.site %}
-        <p class="user-details">
-            <img class="user-details__icon" src="https://icongr.am/octicons/link.svg?size=24&color=currentColor" alt="Website" width="16">
+        <div class="user-details">
+            <div class="user-details__icon" aria-label="Website">
+                {% include ../assets/icons/link.svg %}
+            </div>
             <a class="user-details__label" href="{{user.links.site}}" target="_blank">{{user.links.site}}</a>
-        </p>
+        </div>
         {% endif %}
 
         {% if user.links.twitter %}
-        <p class="user-details">
-            <img class="user-details__icon" src="https://icongr.am/simple/twitter.svg?size=24&color=currentColor" alt="Twitter" width="16">
+        <div class="user-details">
+            <div class="user-details__icon" aria-label="Twitter">
+                {% include ../assets/icons/twitter.svg %}
+            </div>
             <a class="user-details__label" href="https://twitter.com/{{user.links.twitter}}" target="_blank">{{user.links.twitter}}</a>
-        </p>
+        </div>
         {% endif %}
     </div>
 </div>
