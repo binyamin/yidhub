@@ -1,2 +1,2 @@
-# yidden.github.io
+# Yidden
 Directory of Jews on GitHub

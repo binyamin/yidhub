@@ -1,5 +1,5 @@
 {
-  "name": "yidden.github.io",
+  "name": "yidden",
   "version": "1.0.0",
   "private": true,
   "description": "Directory of Yidden on GitHub",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/binyamin/yidden.github.io.git"
+    "url": "git+https://github.com/binyamin/yidden.git"
   },
   "keywords": [],
   "author": "Binyamin Aron Green (https://binyam.in/)",
@@ -18,7 +18,7 @@
   "bugs": {
     "url": "https://github.com/binyamin/yidden.github.io/issues"
   },
-  "homepage": "https://github.com/binyamin/yidden.github.io#readme",
+  "homepage": "https://github.com/binyamin/yidden#readme",
   "devDependencies": {
     "@11ty/eleventy": "^0.11.0",
     "@binyamin/data-cache": "^1.0.1",

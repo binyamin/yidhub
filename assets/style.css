@@ -37,12 +37,20 @@ a:any-link:hover {
 .page-main {
     flex-grow: 1;
     margin: 24px;
+    text-align: center;
+}
+
+.footer-flourish {
+    opacity: 0.3;
+    margin-top: 7vw;
 }
 
 .users {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
+    text-align: left;
 }
 
 /* Cards */
@@ -52,7 +60,6 @@ a:any-link:hover {
     margin: 12px;
     border-radius: 4px;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    height: min-content;
 }
 
 .card-section--top {
