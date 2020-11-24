@@ -20,8 +20,8 @@
   },
   "homepage": "https://github.com/binyamin/yidhub#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.0",
-    "@binyamin/data-cache": "^1.0.1",
+    "@11ty/eleventy": "^0.11.1",
+    "@binyamin/data-cache": "^1.1.0",
     "axios": "^0.20.0"
   }
 }
