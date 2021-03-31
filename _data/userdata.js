@@ -26,8 +26,7 @@ module.exports = async () => {
                 name: data.name,
                 avatar: data.avatar_url,
                 bio: data.bio,
-                location: data.location,
-                public_repos: data.public_repos
+                location: data.location
             };
 
             datacache.set( "users."+uname, userdata);
