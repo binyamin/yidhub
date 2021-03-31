@@ -5,7 +5,7 @@
   "description": "Directory of Yidden on GitHub",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve",
+    "start": "eleventy --serve --quiet",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,8 +20,8 @@
   },
   "homepage": "https://github.com/binyamin/yidhub#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.11.1",
+    "@11ty/eleventy": "^0.12.1",
     "@binyamin/data-cache": "^1.1.0",
-    "axios": "^0.20.0"
+    "axios": "^0.21.1"
   }
 }
